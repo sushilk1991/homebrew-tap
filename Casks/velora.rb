@@ -1,6 +1,6 @@
 cask "velora" do
-  version "0.10.19"
-  sha256 "826396016fe7501816907379297a3ef79faad62c0820ac2d77b632f1fa34dd4f"
+  version "0.10.20"
+  sha256 "a0253bee4926790a26e92bbd58c08b066f80a035c4db731f19ebffb558294563"
 
   url "https://github.com/sushilk1991/velora/releases/download/v#{version}/Velora-#{version}.dmg"
   name "Velora"
@@ -16,6 +16,7 @@ cask "velora" do
   # Application Support with visible progress; nothing here to pre-stage.
   zap trash: [
     "~/.velora",
+    "~/Library/Application Support/Sublime Text/Packages/VeloraVoiceEdit",
     "~/Library/Application Support/Velora",
     "~/Library/Preferences/com.velora.app.plist",
   ]
