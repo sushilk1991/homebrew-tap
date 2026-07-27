@@ -1,6 +1,6 @@
 cask "velora" do
-  version "0.10.20"
-  sha256 "a0253bee4926790a26e92bbd58c08b066f80a035c4db731f19ebffb558294563"
+  version "0.10.21"
+  sha256 "88a96daaff4dc3f59a9160797e095978f71dc4db4e3dd2073500ccd0eb858166"
 
   url "https://github.com/sushilk1991/velora/releases/download/v#{version}/Velora-#{version}.dmg"
   name "Velora"
