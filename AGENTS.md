@@ -1,6 +1,6 @@
 # sushilk1991/tap
 
-Cask: `Casks/velora.rb`. Token `brew` commands load `$(brew --repo sushilk1991/tap)`, a different clone than a git worktree of this repo.
+Cask: `Casks/velora.rb`. Formula: `Formula/baton.rb`. Token `brew` commands load `$(brew --repo sushilk1991/tap)`, a different clone than a git worktree of this repo.
 
 ## Commands
 
@@ -11,11 +11,13 @@ brew livecheck --cask sushilk1991/tap/velora
 brew audit --cask --strict --online --git sushilk1991/tap/velora
 ```
 
+For baton, swap in `./Formula/baton.rb`, `--formula`, and `sushilk1991/tap/baton`; `brew install` then `brew test sushilk1991/tap/baton` runs its test block.
+
 `brew style --cask ./Casks/velora.rb` and `brew audit ./Casks/velora.rb` are rejected: this tree is not the installed tap. Style this tree by file path (drop `--cask`; keep the `except-cops` flag or RuboCop demands a frozen-string comment Homebrew casks do not use). Fetch, livecheck, and audit take the token.
 
 ## Version bump
 
-Change only `version` and `sha256` in `Casks/velora.rb`. Commit subject: `Update Velora to <version>`.
+Velora: change only `version` and `sha256` in `Casks/velora.rb`. Commit subject: `Update Velora to <version>`.
 
 ```sh
 shasum -a 256 path/to/Velora-<version>.dmg
@@ -23,9 +25,11 @@ shasum -a 256 path/to/Velora-<version>.dmg
 
 Write that digest into `sha256`. Keep the existing `url` interpolation.
 
+baton: replace `Formula/baton.rb` with the `baton.rb` asset of the release (rendered from its `checksums.txt`). Commit subject: `Update baton to <version>`.
+
 ## Guardrails
 
-- Style this tree with the file-path command. Run fetch/livecheck/audit by token only when `$(brew --repo sushilk1991/tap)/Casks/velora.rb` matches this file.
+- Style this tree with the file-path command. Run fetch/livecheck/audit by token only when the installed tap's file matches this checkout's.
 - Edit `Casks/velora.rb` in this git checkout. `brew bump-cask-pr` writes the installed tap and opens a PR from there.
 - Keep `sha256` as a hex digest from `shasum -a 256` of that version's `.dmg`.
 
