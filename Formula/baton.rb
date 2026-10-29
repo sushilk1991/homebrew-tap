@@ -7,23 +7,23 @@ class Baton < Formula
   # Each host uses its cgo-free release archive and exact manifest digest.
   on_macos do
     on_arm do
-      url "https://github.com/sushilk1991/baton/releases/download/v0.1.0/baton_darwin_arm64.tar.gz"
-      sha256 "86e1d0bf4bd3104b197e4e7dfd04eeff702d331b410d6ae785a7c3909604c30c"
+      url "https://github.com/sushilk1991/baton/releases/download/v0.1.1/baton_darwin_arm64.tar.gz"
+      sha256 "3104f0e49a7f26a9ab2299b3e7f068c2dbb9b57b3cba079e666aefec5e657457"
     end
     on_intel do
-      url "https://github.com/sushilk1991/baton/releases/download/v0.1.0/baton_darwin_amd64.tar.gz"
-      sha256 "15431a4cae58ea56db781c4c4819f4ccda86dfeffa011f5501f5e8506bfff749"
+      url "https://github.com/sushilk1991/baton/releases/download/v0.1.1/baton_darwin_amd64.tar.gz"
+      sha256 "53739fcf23c04adac36ce28863f6acf92de559feeb866ce5c410e05756f1a196"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/sushilk1991/baton/releases/download/v0.1.0/baton_linux_arm64.tar.gz"
-      sha256 "613830cc758778c7ba15654dd1dd906f354527ee9ebe2dacd1287d32400d7b62"
+      url "https://github.com/sushilk1991/baton/releases/download/v0.1.1/baton_linux_arm64.tar.gz"
+      sha256 "07dc0ae4a7526471e6421bf107d6f4ea4de6599586948318ddef1140ead736ff"
     end
     on_intel do
-      url "https://github.com/sushilk1991/baton/releases/download/v0.1.0/baton_linux_amd64.tar.gz"
-      sha256 "9e00ef80b52a08fa69e62ae451af8a4afb49001a2d0c17f49ccfc4fde4097c02"
+      url "https://github.com/sushilk1991/baton/releases/download/v0.1.1/baton_linux_amd64.tar.gz"
+      sha256 "e4a782b1474ecc6d63981c5f1546cd1d2b2a8f94f158aac2bfb8199018f63599"
     end
   end
 
