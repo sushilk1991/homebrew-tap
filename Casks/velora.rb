@@ -7,8 +7,8 @@ cask "velora" do
   desc "Local-first, on-device dictation"
   homepage "https://github.com/sushilk1991/velora"
 
-  depends_on macos: :sonoma
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "Velora.app"
 
